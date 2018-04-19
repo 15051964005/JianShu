@@ -4,10 +4,23 @@ html,body{
     padding: 0;
     border: 0;
     height: 100%;
-    box-sizing: border-box;
     color: #333;
     font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,
     WenQuanYi Micro Hei,sans-serif;
+    line-height: 1.42857;
+    background-color: #333;
+}
+body{
+    overflow-x: hidden;
+}
+#__nuxt{
+    height: 100%;
+}
+#__layout{
+    height: 100%;
+}
+#sign-template{
+    height: 100%;
 }
 *{
     box-sizing: border-box;
@@ -18,15 +31,22 @@ a{
 }
 a:hover{
     color: #333;
+    text-decoration: none;
 }
 ul,ol,dl{
     list-style: none;
+    padding: 0;
 }
 input,input:hover,input:active,input:focus,inpou:link{
     outline: none;
 }
+botton,input,select,textarea{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 h1,h2,h3,h4,h5,h6{
-    font-size: 17px!important;
+    font-size: 17px;
     margin: 0;
 }
 p{

@@ -3,7 +3,7 @@
         <!--logo-->
         <div class="logo">
             <nuxt-link to="/">
-                <img src="~assets/img/logo.png" alt="">
+                <img src="~assets/img/logo.png" >
             </nuxt-link>
         </div>
         <!--主体-->
@@ -15,7 +15,7 @@
                         登录
                     </nuxt-link>
                     <b>·</b>
-                    <nuxt-link class="" to="/sign-up">
+                    <nuxt-link  to="/sign-up">
                         注册
                     </nuxt-link>
                 </h4>
@@ -27,16 +27,19 @@
                         <input type="text" placeholder="手机号或邮箱">
                         <i class="fa fa-user"></i>
                     </div>
-                    <div class="input-prepend">
-                        <input type="text" placeholder="密码">
+                    <div class="input-prepend" id="last-input-prepend">
+                        <input type="password" placeholder="密码">
                         <i class="fa fa-lock"></i>
                     </div>
                     <div class="remember">
                         <input type="checkbox">
                         <span>记住我</span>
                     </div>
-                    <nuxt-link to="/" class="help">登录遇到问题?</nuxt-link>
-                    <button>登录</button>
+                    <div class="help">
+                        <nuxt-link to="/" >登录遇到问题?</nuxt-link>
+                    </div>
+
+                    <button class="sign-in-btn">登录</button>
                 </form>
             </div>
             <!--第三方-->
@@ -45,23 +48,22 @@
                 <ul>
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-weixin"></i>
+                            <i class="weibo fa fa-weibo"></i>
                         </nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-weibo"></i>
+                            <i class="weixin fa fa-weixin"></i>
                         </nuxt-link>
                     </li>
                     <li>
                         <nuxt-link to="/">
-                            <i class="fa fa-qq"></i>
+                            <i class="qq fa fa-qq"></i>
                         </nuxt-link>
                     </li>
                 </ul>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -72,13 +74,16 @@
         head:{
             title:'登录-简书',
             meta:[
+                {charset:'utf-8'},
                 {name:'keywords',content:'登录界面'},
                 {name:'description',content:'登录简书'},
                 {name:'author',content:'许星'}
             ]
         },
         data(){
-            return
+            return{
+
+            }
         }
 
     }
