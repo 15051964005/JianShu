@@ -1,11 +1,22 @@
 <template>
-  <div>
+  <div id="default-template">
     <nuxt/>
   </div>
 </template>
 <script>
-import Vue from 'vue'
 export default {
-
+    data(){
+        return{
+        }
+    }
 }
 </script>
+
+<style scoped>
+  body{
+    padding: 56px;
+    min-width: 768px;
+    font-size: 17px;
+
+  }
+</style>

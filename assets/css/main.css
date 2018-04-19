@@ -8,7 +8,7 @@ html,body{
     font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,
     WenQuanYi Micro Hei,sans-serif;
     line-height: 1.42857;
-    background-color: #333;
+    background-color: #fff;
 }
 body{
     overflow-x: hidden;
@@ -20,6 +20,9 @@ body{
     height: 100%;
 }
 #sign-template{
+    height: 100%;
+}
+#default-template{
     height: 100%;
 }
 *{

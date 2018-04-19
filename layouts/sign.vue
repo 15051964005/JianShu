@@ -88,7 +88,7 @@
     .sign .main form .input-prepend:first-of-type input{
         border-radius: 4px 4px 0 0;
     }
-    .sign .main form #last-input-prepend input{
+    .sign .main form .input-prepend .input-password{
         border-bottom: 1px solid #c8c8c8;
         border-radius: 0 0 4px 4px;
     }
@@ -204,7 +204,7 @@
     .sign .main .more-sign ul li a i{
         background-color: white;
         text-align: center;
-        font-size: 24px;
+        font-size: 28px;
         line-height: 10px;
     }
 

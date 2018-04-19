@@ -27,8 +27,8 @@
                         <input type="text" placeholder="手机号或邮箱">
                         <i class="fa fa-user"></i>
                     </div>
-                    <div class="input-prepend" id="last-input-prepend">
-                        <input type="password" placeholder="密码">
+                    <div class="input-prepend">
+                        <input type="password" class="input-password" placeholder="密码">
                         <i class="fa fa-lock"></i>
                     </div>
                     <div class="remember">

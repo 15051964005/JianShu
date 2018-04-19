@@ -38,8 +38,8 @@
                             发送验证码
                         </a>
                     </div>
-                    <div class="input-prepend" id="last-input-prepend">
-                        <input type="password" placeholder="设置密码">
+                    <div class="input-prepend" >
+                        <input type="password" class="input-password" placeholder="设置密码">
                         <i class="fa fa-lock"></i>
                     </div>
                     <button class="sign-up-btn">注册</button>
@@ -78,6 +78,7 @@
         head:{
             title:'注册-简书',
             meta:[
+                {charset:'utf-8'},
                 {name:'keywords',content:'注册界面'},
                 {name:'description',content:'注册简书'},
                 {name:'author',content:'许星'}
