@@ -2,6 +2,7 @@
     <div style="height: 100%">
         <my-header></my-header>
         <!--主体部分-->
+        <div>我的 主体</div>
     </div>
 </template>
 <script>
