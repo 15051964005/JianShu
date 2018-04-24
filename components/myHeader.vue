@@ -1,12 +1,12 @@
 <template>
     <div>
         <!--全局顶部导航栏-->
-        <nav class="navbar nav-fiexd-top">
+        <nav class="navbar navbar-fiexd-top">
             <div class="width-limit">
                 <!--logo-->
-                    <nuxt-link to="/" class="logo">
-                        <img src="~assets/img/nav-logo.png" alt="">
-                    </nuxt-link>
+                <nuxt-link to="/" class="logo">
+                    <img src="~assets/img/nav-logo.png" alt="">
+                </nuxt-link>
                 <!--右上角，写文章-->
                 <nuxt-link class="write-btn" to="/write">
                     <i class="fa fa-edit"></i>
@@ -57,73 +57,76 @@
 
                 <!--导航-->
                 <div class="container">
-                    <button class="navbar-toggle"
-                            @click="navShow==true?navShow=false:navShow=true">
-                        <i class="fa fa-bars fa-lg"></i>
-                    </button>
-                    <transition enter-active-class="animated fadeInDown"
-                    leave-active-class="animated fadeOutUp">
-                        <ul class="nav-list" v-show="navShow">
-                            <li class="tab active">
-                                <nuxt-link to="/" >
-                                    <i class="fa fa-compass"></i>
-                                    <span>
+                    <div class="row">
+                        <button class="navbar-toggle"
+                                @click="navShow==true?navShow=false:navShow=true">
+                            <i class="fa fa-bars fa-lg"></i>
+                        </button>
+                        <transition enter-active-class="animated fadeInDown"
+                                    leave-active-class="animated fadeOutUp">
+                            <ul class="nav-list" v-show="navShow">
+                                <li class="tab active">
+                                    <nuxt-link to="/" >
+                                        <i class="fa fa-compass"></i>
+                                        <span>
                                     发现
                                 </span>
-                                </nuxt-link>
-                            </li>
-                            <li class="tab">
-                                <nuxt-link to="/follow">
-                                    <i class="fa fa-book"></i>
-                                    <span>关注</span>
-                                </nuxt-link>
-                            </li>
-                            <li class="tab user" @mouseover="notifyShow=true"
-                                @mouseleave="notifyShow=false">
-                                <nuxt-link to="/notify">
-                                    <i class="fa fa-bell-o"></i>
-                                    <span>消息</span>
-                                </nuxt-link>
-                                <div class="drop-menu" v-show="notifyShow">
-                                    <ul>
-                                        <li>
-                                            <nuxt-link to="/notify/comments">
-                                                <i class="fa fa-comment-o"></i>
-                                                评论
-                                            </nuxt-link>
-                                        </li>
-                                        <li>
-                                            <nuxt-link to="/notify/chats">
-                                                <i class="fa fa-envelope-o"></i>
-                                                简信
-                                            </nuxt-link>
-                                        </li>
-                                        <li>
-                                            <nuxt-link to="/notify/follows">
-                                                <i class="fa fa-user-o"></i>
-                                                关注
-                                            </nuxt-link>
-                                        </li>
-                                        <li>
-                                            <nuxt-link to="/notify/likes">
-                                                <i class="fa fa-heart-o"></i>
-                                                喜欢和赞
-                                            </nuxt-link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="tab search">
-                                <form method="post">
-                                    <input type="text" class="search-input"
-                                           placeholder="搜索" @focus="bgShow=true" @blur="bgShow=false">
-                                    <a href="#" class="search-btn" :class="{active:bgShow}">
-                                        <i class="fa fa-search"></i>
-                                    </a>
-                                </form>
-                            </li>
-                        </ul>
-                    </transition>
+                                    </nuxt-link>
+                                </li>
+                                <li class="tab">
+                                    <nuxt-link to="/follow">
+                                        <i class="fa fa-book"></i>
+                                        <span>关注</span>
+                                    </nuxt-link>
+                                </li>
+                                <li class="tab user" @mouseover="notifyShow=true"
+                                    @mouseleave="notifyShow=false">
+                                    <nuxt-link to="/notify">
+                                        <i class="fa fa-bell-o"></i>
+                                        <span>消息</span>
+                                    </nuxt-link>
+                                    <div class="drop-menu" v-show="notifyShow">
+                                        <ul>
+                                            <li>
+                                                <nuxt-link to="/notify/comments">
+                                                    <i class="fa fa-comment-o"></i>
+                                                    评论
+                                                </nuxt-link>
+                                            </li>
+                                            <li>
+                                                <nuxt-link to="/notify/chats">
+                                                    <i class="fa fa-envelope-o"></i>
+                                                    简信
+                                                </nuxt-link>
+                                            </li>
+                                            <li>
+                                                <nuxt-link to="/notify/follows">
+                                                    <i class="fa fa-user-o"></i>
+                                                    关注
+                                                </nuxt-link>
+                                            </li>
+                                            <li>
+                                                <nuxt-link to="/notify/likes">
+                                                    <i class="fa fa-heart-o"></i>
+                                                    喜欢和赞
+                                                </nuxt-link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="tab search">
+                                    <form method="post">
+                                        <input type="text" class="search-input"
+                                               placeholder="搜索" @focus="bgShow=true" @blur="bgShow=false">
+                                        <a href="#" class="search-btn" :class="{active:bgShow}">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </form>
+                                </li>
+                            </ul>
+                        </transition>
+                    </div>
+
 
                 </div>
             </div>
@@ -143,7 +146,6 @@
             }
         },
         methods:{
-
         }
     }
 </script>
@@ -152,6 +154,7 @@
     nav{
         height: 56px;
         width: 100%;
+        background: #fff;
     }
     .navbar{
         margin-bottom: 20px;
@@ -169,7 +172,6 @@
         z-index: 9999;
     }
     nav .width-limit{
-        height: 100%;
         min-width: 768px;
         max-width: 1440px;
         margin: 0 auto;
@@ -226,15 +228,16 @@
         border-radius: 50%;
         border: 1px solid #eee;
     }
-
     nav .user .drop-menu{
         position: absolute;
-        bonton: 0;
+        left: 0;
         box-shadow: 0 0 8px rgba(0,0,0,.1);
         min-width: 160px;
         z-index: 999;
         margin:0 ;
-        padding: 10px 0;
+        padding: 5px 0;
+        font-size: 15px;
+        background-color: #fff;
     }
     nav .user .drop-menu li a {
         padding: 10px 20px;
@@ -245,7 +248,7 @@
         background: #f5f5f5;
     }
     nav .user .drop-menu li a i{
-        margin-right: 15px;
+        margin-right: 10px;
         color:#ea6f5a;
         width: 20px;
         height: 20px;
@@ -333,50 +336,37 @@
         line-height: 30px;
         font-size: 15px;
     }
-    nav .navbar-toggle{
-        border: 1px solid #ddd;
-        background: #fff;
-        color: #969696;
-        border-radius: 4px;
-        height: 40px;
-        width: 46px;
-        padding: 11px 10px;
-        margin: 8px 15px 8px 0;
 
-    }
-    nav .navbar-toggle i{
-
-    }
-    nav .navbar-toggle:hover{
-        background: hsla(0,0%,71%,.1)!important;
-        border: 1px solid #ddd!important;
-    }
-    nav .navbar-toggle:focus{
-        outline: none;
-        background: #ddd;
-        border:none;
-    }
     @media(max-width: 1440px){
         nav .nav-list li>a i{
             display: none;
         }
+        nav .nav-list .search form .search-input{
+            width: 160px;
+        }
+        nav .nav-list .search form .search-input:focus{
+            width: 240px;
+        }
     }
     @media (max-width: 1080px) {
+        nav .nav-list  .search form .search-input,
+        nav .nav-list  .search form .search-input:focus{
+            width: 150px;
+        }
         nav .nav-list li span{
             display: none;
         }
         nav .nav-list li>a i{
             display: block;
         }
-        nav .nav-list  .search form .search-input,
-        nav .nav-list  .search form .search-input:focus{
-            width: 150px;
-        }
+
     }
     @media (max-width: 767px) and (min-width: 320px) {
         nav .nav-list{
-            transition: height 0.5s;
             display: block;
+            position: absolute;
+            top: 56px;
+            max-height: 340px;
             width: 100vw;
             overflow-y: auto ;
             overflow-x: hidden;
@@ -387,9 +377,9 @@
             border: none;
             box-shadow: inset 0 1px 0 hsla(0,0%,100%,.1);
             background: #fff;
-            z-index: -10;
+            z-index: 10;
         }
-        nav .container .nav-list>li.tab{
+        nav .nav-list>li.tab{
             width: 100%;
             display: block;
             margin-right: 10px ;
@@ -433,4 +423,27 @@
         }
     }
 
+    nav .navbar-toggle{
+        position: relative;
+        float: left;
+        border: 1px solid #ddd;
+        background: #fff;
+        color: #969696;
+        border-radius: 4px;
+        height: 40px;
+        width: 46px;
+        padding: 11px 10px;
+        margin: 8px 15px 8px 0;
+    }
+    nav .navbar-toggle i{
+    }
+    nav .navbar-toggle:hover{
+        background: hsla(0,0%,71%,.1)!important;
+        border: 1px solid #ddd!important;
+    }
+    nav .navbar-toggle:focus{
+        outline: none;
+        background: #ddd;
+        border:none;
+    }
 </style>

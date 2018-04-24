@@ -12,11 +12,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   body{
     padding: 56px;
     min-width: 768px;
     font-size: 17px;
-
   }
 </style>
