@@ -1,0 +1,308 @@
+<template>
+    <div class="comment-list">
+        <!--提交新内容的表单-->
+        <my-form>
+            <nuxt-link to="/u/123" class="avatar">
+                <img src="~assets/img/default-avatar.jpg">
+            </nuxt-link>
+        </my-form>
+        <div class="normal-comment-list">
+            <!--显示留言的信息-->
+            <div class="top-title">
+                <span>1 条评论</span>
+                <a href="#" class="author-only">只看作者</a>
+                <div class="pull-right">
+                    <a href="#" class="active">按喜欢排序</a>
+                    <a href="#">按时间正序</a>
+                    <a href="#">按时间倒序</a>
+                </div>
+            </div>
+            <!--显示所有留言的内容-->
+            <div class="comment">
+                <div class="author">
+                    <div class="v-tooltip-container">
+                        <nuxt-link to="/u/123" class="avatar">
+                            <img src="~assets/img/default-avatar.jpg" alt="">
+                        </nuxt-link>
+                    </div>
+                    <div class="info">
+                        <nuxt-link to="/u/123" class="name">
+                            简书注册用户
+                        </nuxt-link>
+                        <div class="meta">
+                            <span>68楼 · 2018.04.14 21:38</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-wrap">
+                    <p>我发现我都可以陪你去做，还有第101件陪你一起看书😂</p>
+                    <div class="tool-group">
+                        <a href="#" class="zan">
+                            8
+                        </a>
+                        <a href="#" class="comment-btn">
+                            <i class="fa fa-comment"></i>
+                            <span>回复</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sub-comment-list"></div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script >
+    import myForm from '~/components/myForm'
+    export default {
+        name: "myComment",
+        components:{
+            myForm
+        },
+        data() {
+            return {
+                comments: [
+                    {
+                        "id": 23204412,
+                        "compiled_content": "还不错呦~",
+                        "floor": 2,
+                        "note_id": 27198662,
+                        "user_id": 11696335,
+                        "created_at": "2018-04-25T16:37:47.000+08:00",
+                        "user": {
+                            "id": 11696335,
+                            "slug": "ce37c858e871",
+                            "nickname": "皮卡林",
+                            "avatar": "http://upload.jianshu.io/users/upload_avatars/11696335/84ea8639-f3f1-480a-93d4-e1425762b1c6",
+                            "is_author": false,
+                            "badge": null
+                        },
+                        "liked": true,
+                        "likes_count": 13,
+                        "children_count": 4,
+                        "children": [
+                            {
+                                "id": 23204440,
+                                "compiled_content": "是还不错",
+                                "user_id": 11696407,
+                                "parent_id": 23204412,
+                                "created_at": "2018-04-25T16:38:31.000+08:00",
+                                "user": {
+                                    "id": 11696407,
+                                    "slug": "f22f9ffb9bc6",
+                                    "nickname": "f22f9ffb9bc6"
+                                }
+                            },
+                            {
+                                "id": 23204445,
+                                "compiled_content": "约吗？",
+                                "user_id": 11696297,
+                                "parent_id": 23204412,
+                                "created_at": "2018-04-25T16:38:41.000+08:00",
+                                "user": {
+                                    "id": 11696297,
+                                    "slug": "7c3479ef05d2",
+                                    "nickname": "0缄默0"
+                                }
+                            },
+                            {
+                                "id": 23204464,
+                                "compiled_content": "\u003ca href=\"/users/7c3479ef05d2\" class=\"maleskine-author\" target=\"_blank\" data-user-slug=\"7c3479ef05d2\"\u003e@0缄默0\u003c/a\u003e 再见",
+                                "user_id": 11696335,
+                                "parent_id": 23204412,
+                                "created_at": "2018-04-25T16:39:06.000+08:00",
+                                "user": {
+                                    "id": 11696335,
+                                    "slug": "ce37c858e871",
+                                    "nickname": "皮卡林"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 23204424,
+                        "compiled_content": "报警找我110",
+                        "floor": 5,
+                        "note_id": 27198662,
+                        "user_id": 11726469,
+                        "created_at": "2018-04-25T16:38:04.000+08:00",
+                        "user": {
+                            "id": 11726469,
+                            "slug": "7466c63a08ac",
+                            "nickname": "远方无远方",
+                            "avatar": "http://upload.jianshu.io/users/upload_avatars/11726469/2fa7e041-5918-4e17-b3e2-8b252a5a6a32",
+                            "is_author": false,
+                            "badge": null
+                        },
+                        "liked": true,
+                        "likes_count": 8,
+                        "children_count": 1,
+                        "children": [
+                            {
+                                "id": 23204454,
+                                "compiled_content": "你是个傻子吧",
+                                "user_id": 11726654,
+                                "parent_id": 23204424,
+                                "created_at": "2018-04-25T16:38:58.000+08:00",
+                                "user": {
+                                    "id": 11726654,
+                                    "slug": "9751bf239b07",
+                                    "nickname": "Ace_e60d"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": 23204418,
+                        "compiled_content": "支持一下 ，消灭0回复",
+                        "floor": 4,
+                        "note_id": 27198662,
+                        "user_id": 11726245,
+                        "created_at": "2018-04-25T16:37:51.000+08:00",
+                        "user": {
+                            "id": 11726245,
+                            "slug": "b847b7d49625",
+                            "nickname": "就是cc",
+                            "avatar": "http://cdn2.jianshu.io/assets/default_avatar/8-a356878e44b45ab268a3b0bbaaadeeb7.jpg",
+                            "is_author": false,
+                            "badge": null
+                        },
+                        "liked": true,
+                        "likes_count": 6,
+                        "children_count": 0,
+                        "children": []
+                    },
+                ]
+            }
+        }
+    }
+</script>
+
+<style >
+    .comment-list {
+        padding-top: 20px;
+    }
+
+    .comment-list .new-comment {
+        position: relative;
+        margin: 0 0 20px 56px;
+    }
+
+    .comment-list .new-comment .avatar {
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+        position: absolute;
+        left: -48px;
+        margin-right: 10px;
+    }
+
+    .comment-list .new-comment textarea {
+        padding: 10px 15px;
+        width: 100%;
+        height: 80px;
+        outline: none;
+        resize: none;
+        display: inline-block;
+        font-size: 13px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        background: #f7f7f7;
+        vertical-align: top;
+    }
+
+    .comment-list .new-comment .write-function-block {
+        height: 50px;
+    }
+
+    .comment-list .new-comment .write-function-block .emoji {
+        margin-top: 14px;
+        float: left;
+    }
+
+    .comment-list .new-comment .write-function-block .emoji i {
+        font-size: 20px;
+        color: #969696;
+    }
+
+    .comment-list .new-comment .write-function-block .emoji i:hover {
+        color: #2f2f2f;
+    }
+
+    .comment-list .new-comment .write-function-block .hint {
+        float: left;
+        margin: 17px 0 0 20px;
+        font-size: 13px;
+        color: #969696;
+
+    }
+
+    .comment-list .new-comment .write-function-block .btn-send {
+        float: right;
+        width: 78px;
+        padding: 8px 18px;
+        margin: 10px 0;
+        display: block;
+        font-size: 16px;
+        background: #42c02e;
+        color: #fff;
+        text-align: center;
+        border-radius: 20px;
+        outline: none;
+    }
+
+    .comment-list .new-comment .write-function-block .btn-send:hover {
+        background: #3db922;
+    }
+
+    .comment-list .new-comment .write-function-block .btn-cancel {
+        float: right;
+        margin: 18px 30px 0 0;
+        font-size: 16px;
+        color: #969696;
+    }
+    .comment-list .new-comment .write-function-block .btn-cancel:hover{
+        color: #333333;
+    }
+    .comment-list .normal-comment-list {
+        margin-top: 30px;
+    }
+
+    .comment-list .normal-comment-list .top-title {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .comment-list .normal-comment-list .top-title span {
+        vertical-align: middle;
+    }
+
+    .comment-list .normal-comment-list .top-title .author-only {
+        font-size: 12px;
+        padding: 4px 8px;
+        margin-left: 10px;
+        color: #969696;
+        border: 1px solid #dcdcdc;
+        border-radius: 20px;
+    }
+    .comment-list .normal-comment-list .top-title .pull-right{
+        float: right;
+        display: inline-block;
+    }
+    .comment-list .normal-comment-list .top-title .pull-right a {
+        font-size: 12px;
+        color: #969696;
+        margin-left: 10px;
+        font-weight: 400;
+    }
+
+    .comment-list .normal-comment-list .top-title .pull-right a.active {
+        color: #2f2f2f;
+    }
+    .comment-list .normal-comment-list .comment{
+        padding: 20px 0 30px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+</style>
