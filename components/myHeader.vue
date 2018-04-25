@@ -335,6 +335,7 @@
         text-align: center;
         line-height: 30px;
         font-size: 15px;
+        font-weight: 100;
     }
 
     @media(max-width: 1440px){
