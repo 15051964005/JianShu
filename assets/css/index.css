@@ -517,7 +517,7 @@
 }
 
 .note .post .meta-bottom .islike .like-btn:before {
-    animation: changeLike .6s steps(19) forwards;
+    animation: changeLike .5s steps(19) forwards;
 }
 
 .note .post .meta-bottom .islike a {

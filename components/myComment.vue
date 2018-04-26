@@ -404,9 +404,9 @@
         color: #333;
     }
     .comment-list .comment .comment-wrap .iszan .like-btn:before{
-        animation: changeLike .6s steps(19) forwards;
+        animation: changeZan .6s 1 steps(19) forwards;
     }
-    @keyframes changeLike {
+    @keyframes changeZan {
         0%{
             background-position: -50px;
         }
