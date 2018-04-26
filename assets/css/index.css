@@ -487,3 +487,105 @@
     color: #9b9b9b;
     line-height: 40px;
 }
+
+
+/*********************作者详情页面布局开始********************/
+.person .row{
+    padding-top: 30px;
+}
+.person .row .main{
+    padding-right: 0;
+}
+.person .row .main .main-top{
+    margin-bottom:20px;
+}
+.person .main .main-top .avatar{
+    display: block;
+    float: left;
+    width:80px ;
+    height: 80px;
+    margin-left: -2px;
+}
+.person .main .main-top .btn-follow{
+    float: right;
+    margin: 23px 0 23px 16px;
+    font-size:15px ;
+    padding: 8px 0;
+    width: 100px;
+    background: #42c02e;
+    color: #fff;
+    border-radius: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.person .main .main-top .btn-follow:hover{
+    background: #3db922;
+}
+.person .main .main-top .btn-follow span{
+    margin-left:5px ;
+}
+.person .main .main-top .btn-hollow{
+    float: right;
+    margin: 23px 0 23px 16px;
+    font-size:15px ;
+    font-weight: 400;
+    padding: 8px 0;
+    width: 90px;
+    color: #42c02e;
+    border: 1px solid #42c02e;
+    border-radius: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.person .main .main-top .btn-hollow:hover{
+    background: #F4FBF3;
+}
+.person .main .main-top .btn-hollow span{
+    margin-left:5px ;
+}
+.person .main .main-top .title{
+    padding: 5px 0 0 100px;
+}
+.person .main .main-top .title .name{
+    font-size:20px ;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.person .main .main-top .title i{
+    color: #3194d0 ;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.person .main .main-top .info{
+    padding-left: 100px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.person .main .main-top .info ul{
+    font-size: 0;
+}
+.person .main .main-top .info ul li{
+    float: left;
+    display: inline-block;
+}
+.person .main .main-top .info ul .meta-block{
+    border-right: 1px solid #f0f0f0;
+    font-size: 12px;
+    padding-right: 7px;
+    margin: 0 7px 6px 0;
+    color: #969696;
+}
+.person .main .main-top .info ul .meta-block p{
+    font-size: 15px;
+    color: #333;
+}
+.person .main .main-top .info ul .meta-block span{
+    color: #969696;
+    padding-right: 5px;
+}
+.person .main .trigger-menu{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0;
+}

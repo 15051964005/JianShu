@@ -165,7 +165,7 @@
                 <div class="follow-detail">
                     <div class="info">
                         <nuxt-link class="avatar" to="/u/123">
-                            <img src="~assets/img/default-avatar.jpg" >
+                            <img src="~assets/img/default-avatar.jpg">
                         </nuxt-link>
                         <a href="#" class="btn btn-follow">
                             <i class="fa fa-plus"></i>
@@ -218,7 +218,6 @@
                 <my-comment></my-comment>
             </div>
         </div>
-
     </div>
 
 </template>
