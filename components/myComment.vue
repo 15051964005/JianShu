@@ -36,17 +36,48 @@
                 </div>
                 <div class="comment-wrap">
                     <p>我发现我都可以陪你去做，还有第101件陪你一起看书😂</p>
-                    <div class="tool-group">
-                        <a href="#" class="zan">
-                            8
+                    <div class="tool-group" :class="{'iszan':iszan}" @click="iszan=!iszan">
+                        <a href="javascrip:void(0)" class="like-btn">
+                            <span>8人赞</span>
                         </a>
-                        <a href="#" class="comment-btn">
-                            <i class="fa fa-comment"></i>
+                        <a href="javascrip:void(0)" class="comment-btn">
+                            <i class="fa fa-comment-o"></i>
                             <span>回复</span>
                         </a>
                     </div>
                 </div>
-                <div class="sub-comment-list"></div>
+                <div class="sub-comment-list">
+                    <div class="sub-comment">
+                        <div class="sub-comment-content">
+                            <div class="v-tooltip-container">
+                                <nuxt-link to="/">
+                                    南城念北安
+                                </nuxt-link>
+                                :
+                            </div>
+                            <span>
+                                <a href="#" class="maleskine">
+                                    @边瑶姑娘
+                                </a>
+                                有些人曾经拥有就可以了，他的出现就是为了给你上一课然后离开
+                            </span>
+                        </div>
+                        <div class="sub-tool-group">
+                            <span>2018.03.10 13:44</span>
+                            <a href="#">
+                                <i class="fa fa-comment-o"></i>
+                                <span>回复</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sub-comment more-comment">
+                        <a href="#" class="more-comment-btn">
+                            <i class="fa fa-edit"></i>
+                            <span>添加新评论</span>
+                        </a>
+                    </div>
+                    <my-form></my-form>
+                </div>
             </div>
         </div>
     </div>
@@ -172,7 +203,8 @@
                         "children_count": 0,
                         "children": []
                     },
-                ]
+                ],
+                iszan:false
             }
         }
     }
@@ -185,7 +217,7 @@
 
     .comment-list .new-comment {
         position: relative;
-        margin: 0 0 20px 56px;
+        margin: 0 0 20px 48px;
     }
 
     .comment-list .new-comment .avatar {
@@ -211,8 +243,12 @@
         vertical-align: top;
     }
 
+    /*.comment-list .new-comment textarea:focus .write-function-block {*/
+        /*display: block;*/
+    /*}*/
     .comment-list .new-comment .write-function-block {
         height: 50px;
+        /*display: none;*/
     }
 
     .comment-list .new-comment .write-function-block .emoji {
@@ -228,6 +264,7 @@
     .comment-list .new-comment .write-function-block .emoji i:hover {
         color: #2f2f2f;
     }
+
 
     .comment-list .new-comment .write-function-block .hint {
         float: left;
@@ -304,5 +341,142 @@
     .comment-list .normal-comment-list .comment{
         padding: 20px 0 30px 0;
         border-bottom: 1px solid #f0f0f0;
+    }
+    .comment-list .comment .author{
+        margin-bottom: 20px;
+    }
+    .comment-list .comment .author .v-tooltip-container{
+        display: inline-block;
+    }
+    .comment-list .comment .author .avatar{
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .comment-list .comment .author .info{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .comment-list .comment .author .info .name{
+        font-size: 13px;
+    }
+    .comment-list .comment .author .info .meta{
+        font-size: 12px;
+        color: #969696;
+    }
+    .comment-list .comment .comment-wrap .like-btn{
+        padding-left: 23px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        color: #969696;
+        position: relative;
+    }
+
+    .comment-list .comment .comment-wrap .like-btn:before{
+        content: "";
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: -16px;
+        top: -16px;
+        background-image: url("../assets/img/zan.png");
+        background-size: 1050px 50px;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .comment-list .comment .comment-wrap .like-btn span{
+        font-size: 14px;
+        color: #969696;
+    }
+    .comment-list .comment .comment-wrap .like-btn:hover span{
+        color: #333!important;
+    }
+    .comment-list .comment .comment-wrap .like-btn:hover:before{
+        background-position-x: -50px;
+    }
+
+    /****************完成点赞的动画效果******************/
+    .comment-list .comment .comment-wrap .iszan .like-btn span{
+        color: #333;
+    }
+    .comment-list .comment .comment-wrap .iszan .like-btn:before{
+        animation: changeLike .6s steps(19) forwards;
+    }
+    @keyframes changeLike {
+        0%{
+            background-position: -50px;
+        }
+        100%{
+            background-position: right;
+        }
+    }
+
+    .comment-list .comment .comment-wrap .comment-btn{
+        font-size: 14px;
+        color: #969696;
+    }
+    .comment-list .comment .comment-wrap .comment-btn:hover{
+        color: #333;
+    }
+    .comment-list .comment .comment-wrap .comment-btn i{
+        font-size: 18px;
+        margin-right: 5px;
+    }
+    .comment-list .sub-comment-list{
+        margin-top: 20px;
+        padding: 5px 0 5px 20px;
+        border-left: 2px solid #f0f0f0;
+    }
+    .comment-list .sub-comment-list .sub-comment{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-comment-content{
+        font-size: 14px;
+        margin-bottom: 5px;
+        line-height: 1.5;
+    }
+    .comment-list .sub-comment-list  .v-tooltip-container{
+        display: inline-block;
+    }
+    .comment-list .sub-comment-list .sub-comment-content a{
+        color: #3194d0;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group{
+        font-size: 12px;
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group a{
+        margin-left: 10px;
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group a:hover{
+        color: #333333;
+    }
+    .comment-list .sub-comment-list .sub-comment .sub-tool-group a i{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .comment-list .sub-comment-list .more-comment{
+        color: #969696;
+        font-size: 14px;
+        border: 0;
+    }
+    .comment-list .sub-comment-list .more-comment a{
+        color: #969696;
+    }
+    .comment-list .sub-comment-list .more-comment a:hover{
+        color: #333;
+    }
+    .comment-list .sub-comment-list .more-comment a i{
+        margin-right: 5px;
+    }
+    .comment-list .sub-comment-list form{
+        margin: 0;
     }
 </style>
