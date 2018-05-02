@@ -200,18 +200,54 @@
                         </div>
                     </div>
                     <div class="share">
-                        <a href="#" class="share-btn">
+                        <a href="javascrip:void(0)" class="share-btn" v-tooltip="'分享到微博'">
                             <i class="fa fa-weibo weibo"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="javascrip:void(0)" class="share-btn" v-tooltip="'分享到微信'">
                             <i class="fa fa-weixin weixin"></i>
                         </a>
-                        <a href="#" class="share-btn">
+                        <a href="javascrip:void(0)" class="share-btn" v-tooltip="'分享到qq'">
                             <i class="fa fa-qq qq"></i>
                         </a>
-                        <a href="#" class="share-btn more-share">
-                            更多分享
-                        </a>
+                        <v-popover  offset="16">
+                            <a href="javascrip:void(0)" class="share-btn more-share">
+                                更多分享
+                            </a>
+                            <template slot="popover">
+                                <ul class="more-share-list">
+                                    <li>
+                                        <a href="javascrip:void(0)">
+                                            <i class="fa fa-star" style="color: #fdc717"></i>
+                                            <span>分享到qq空间</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascrip:void(0)">
+                                            <i class="fa fa-twitter" style="color: #09aaea"></i>
+                                            <span>分享到Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascrip:void(0)">
+                                            <i class="fa fa-facebook-square"  style="color: #44609e"></i>
+                                            <span>分享到Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascrip:void(0)">
+                                            <i class="fa fa-google-plus" style="color: #ea6f5a"></i>
+                                            <span>分享到Google</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascrip:void(0)">
+                                            <i class="fa " style="color: #2e8621">豆</i>
+                                            <span>分享到豆瓣</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </template>
+                        </v-popover>
                     </div>
                 </div>
                 <!--留言回复组件-->
@@ -226,6 +262,7 @@
 <script>
     import myHeader from '~/components/myHeader'
     import myComment from '~/components/myComment'
+    import myForm from '~/components/myForm'
 
     export default {
         head: {
@@ -239,7 +276,8 @@
         },
         components: {
             myHeader,
-            myComment
+            myComment,
+            myForm
         },
         data() {
             return {

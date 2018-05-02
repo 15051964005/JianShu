@@ -7,10 +7,12 @@
             </textarea>
             <div class="write-function-block">
                 <div class="emoji-model-wrap">
-                    <a href="#" class="emoji">
+                    <a href="javascript:void(0)" class="emoji">
                         <i class="fa fa-smile-o"></i>
-                        <div class="emoji-model"></div>
                     </a>
+                    <div class="emoji-modal">
+                        <emoji-vue></emoji-vue>
+                    </div>
                 </div>
                 <div class="hint">Ctrl+Enter发表</div>
                 <a href="#" class="btn-send">发送</a>
@@ -21,8 +23,13 @@
 </template>
 
 <script>
+    import emojiVue from '~/components/emoji'
     export default {
         name: "myForm",
+        components:{
+            emojiVue
+        }
+        ,
         data(){
             return{
 

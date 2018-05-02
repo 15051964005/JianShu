@@ -242,15 +242,12 @@
         background: #f7f7f7;
         vertical-align: top;
     }
-
-    /*.comment-list .new-comment textarea:focus .write-function-block {*/
-        /*display: block;*/
-    /*}*/
     .comment-list .new-comment .write-function-block {
         height: 50px;
-        /*display: none;*/
     }
-
+    comment-list .new-comment .write-function-block .emoji-modal-wrap{
+        position: relative;
+    }
     .comment-list .new-comment .write-function-block .emoji {
         margin-top: 14px;
         float: left;
@@ -264,8 +261,26 @@
     .comment-list .new-comment .write-function-block .emoji i:hover {
         color: #2f2f2f;
     }
+    /****************表情弹出框样式*****************/
+    .comment-list .new-comment .write-function-block .emoji-modal{
+        position: absolute;
+        top:135px;
+        left: -48px;
+        z-index: 100;
+    }
+    .comment-list .new-comment .write-function-block .emoji-modal:before{
+        position: absolute;
+        left: 12%;
+        top: -10px;
+        content: "";
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-color: red;
+        border-width: 9px 9px 9px 9px;
+        /*border-color:  transparent transparent #333 transparent;*/
 
-
+    }
     .comment-list .new-comment .write-function-block .hint {
         float: left;
         margin: 17px 0 0 20px;
@@ -334,7 +349,9 @@
         margin-left: 10px;
         font-weight: 400;
     }
-
+    .comment-list .normal-comment-list .top-title .pull-right a:hover{
+        color:#2f2f2f ;
+    }
     .comment-list .normal-comment-list .top-title .pull-right a.active {
         color: #2f2f2f;
     }
