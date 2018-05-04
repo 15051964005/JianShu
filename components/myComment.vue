@@ -2,9 +2,9 @@
     <div class="comment-list">
         <!--提交新内容的表单-->
         <my-form>
-            <nuxt-link to="/u/123" class="avatar">
+            <a href="javascript:void(0)" class="avatar">
                 <img src="~assets/img/default-avatar.jpg">
-            </nuxt-link>
+            </a>
         </my-form>
         <div class="normal-comment-list">
             <!--显示留言的信息-->

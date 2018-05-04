@@ -42,7 +42,7 @@
                                 </nuxt-link>
                                 <div class="content">
                                     <div class="author">
-                                        <nuxt-link to="/p/123" class="avatar">
+                                        <nuxt-link to="/u/123" class="avatar">
                                             <img src="~assets/img/default-avatar.jpg" >
                                         </nuxt-link>
                                         <div class="info">

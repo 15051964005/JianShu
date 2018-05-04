@@ -6,13 +6,15 @@
                       placeholder="写下你的评论...">
             </textarea>
             <div class="write-function-block">
-                <div class="emoji-model-wrap">
-                    <a href="javascript:void(0)" class="emoji">
+                <div class="emoji-model-wrap" >
+                    <popover :always="false" placement="bottomLeft">
+                        <a href="javascript:void(0)" class="emoji button">
                         <i class="fa fa-smile-o"></i>
                     </a>
-                    <div class="emoji-modal">
-                        <emoji-vue></emoji-vue>
-                    </div>
+                        <div class="emoji-modal" slot="content">
+                            <emoji-vue></emoji-vue>
+                        </div>
+                    </popover>
                 </div>
                 <div class="hint">Ctrl+Enter发表</div>
                 <a href="#" class="btn-send">发送</a>
@@ -24,16 +26,15 @@
 
 <script>
     import emojiVue from '~/components/emoji'
+
     export default {
         name: "myForm",
-        components:{
+        components: {
             emojiVue
         }
         ,
-        data(){
-            return{
-
-            }
+        data() {
+            return {}
         }
     }
 </script>

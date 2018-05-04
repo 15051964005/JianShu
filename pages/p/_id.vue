@@ -165,7 +165,7 @@
                 <div class="follow-detail">
                     <div class="info">
                         <nuxt-link class="avatar" to="/u/123">
-                            <img src="~assets/img/default-avatar.jpg" >
+                            <img src="~assets/img/default-avatar.jpg">
                         </nuxt-link>
                         <a href="#" class="btn btn-follow">
                             <i class="fa fa-plus"></i>
@@ -209,7 +209,7 @@
                         <a href="javascrip:void(0)" class="share-btn" v-tooltip="'分享到qq'">
                             <i class="fa fa-qq qq"></i>
                         </a>
-                        <v-popover  offset="16">
+                        <v-popover  offset="16" >
                             <a href="javascrip:void(0)" class="share-btn more-share">
                                 更多分享
                             </a>
@@ -254,7 +254,6 @@
                 <my-comment></my-comment>
             </div>
         </div>
-
     </div>
 
 </template>
