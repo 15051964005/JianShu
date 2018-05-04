@@ -104,7 +104,87 @@
                     </div>
                 </div>
                 <div class="col-xs-7 col-xs-offset-1 aside">
-
+                    <div class="title">个人介绍</div>
+                    <div class="description">
+                        <div class="js-intro">
+                            逃跑医生，预防医学专家，抗衰老顾问，创业者，奶爸！人生意义思考者，东方智慧践行者。非著名作家坯子。
+                        </div>
+                    </div>
+                    <ul class="list user-dynamic">
+                        <li>
+                            <nuxt-link to="/users/123/collection">
+                                <i class="fa fa-book"></i>
+                                <span>他关注的专题/文集/连载</span>
+                            </nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/users/123/like">
+                                <i class="fa fa-heart-o"></i>
+                                <span>他喜欢的文章</span>
+                            </nuxt-link>
+                        </li>
+                    </ul>
+                    <div>
+                        <!--专题和文集-->
+                        <div>
+                            <!--创建的专题-->
+                            <div>
+                                <div class="title">他创建的专题</div>
+                                <ul class="list">
+                                    <li>
+                                        <nuxt-link to="/collection/123"
+                                                   class="avatar-collection">
+                                            <img src="~/assets/img/movie.png">
+                                        </nuxt-link>
+                                        <nuxt-link to="/collection/123"
+                                                   class="name">
+                                            内容营销
+                                        </nuxt-link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--管理的专题-->
+                            <div>
+                                <div class="title">他管理的专题</div>
+                                <ul class="list">
+                                    <li>
+                                        <nuxt-link to="/collection/123"
+                                                   class="avatar-collection">
+                                            <img src="~/assets/img/movie.png">
+                                        </nuxt-link>
+                                        <nuxt-link to="/collection/123"
+                                                   class="name">
+                                            阅后即焚
+                                        </nuxt-link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <!--文集-->
+                            <div class="title">他的文集</div>
+                            <ul class="list">
+                                <li>
+                                    <nuxt-link to="/note/123">
+                                        <i class="fa fa-book"></i>
+                                    </nuxt-link>
+                                    <nuxt-link to="/note/123"
+                                               class="name">
+                                        随笔
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/note/123">
+                                        <i class="fa fa-book"></i>
+                                    </nuxt-link>
+                                    <nuxt-link to="/note/123"
+                                               class="name">
+                                        感想
+                                    </nuxt-link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,31 +197,32 @@
     import MyNew from '~/components/user/MyNew'
     import MyComment from '~/components/user/MyComment'
     import MyHot from '~/components/user/MyHot'
+
     export default {
-        head:{
-            title:"简书作者页面-创作你的创作",
-            meta:[
-                {charset:'utf-8'},
-                {name:'keywords',content:'作者详情页面'},
-                {name:'description',content:'作者页面'},
-                {name:'author',content:'许星'}
+        head: {
+            title: "简书作者页面-创作你的创作",
+            meta: [
+                {charset: 'utf-8'},
+                {name: 'keywords', content: '作者详情页面'},
+                {name: 'description', content: '作者页面'},
+                {name: 'author', content: '许星'}
             ]
         },
-        components:{
+        components: {
             myHeader,
             MyArticle,
             MyNew,
             MyComment,
             MyHot
         },
-        data(){
-            return{
-                currentTab:'MyArticle'
+        data() {
+            return {
+                currentTab: 'MyArticle'
             }
         },
-        methods:{
-            toggleTab:function (tab) {
-                this.currentTab=tab
+        methods: {
+            toggleTab: function (tab) {
+                this.currentTab = tab
             }
         }
     }

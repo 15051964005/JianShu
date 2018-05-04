@@ -41,6 +41,9 @@ ul,ol,dl{
     margin: 0;
     padding: 0;
 }
+li{
+    line-height: 20px;
+}
 input,input:hover,input:active,input:focus,inpou:link{
     outline: none;
 }

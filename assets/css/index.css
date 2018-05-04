@@ -822,3 +822,84 @@ i.qq {
     font-size: 17px;
     margin-right: 5px;
 }
+.person .aside {
+    padding: 0;
+}
+.person .aside .title{
+    float: left;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #969696;
+}
+.person .aside .description{
+    position: relative;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    text-align: left;
+    font-size: 0;
+    border-bottom: 1px solid #f0f0f0;
+    clear: both;
+    word-break: break-word;
+}
+.person .aside .description .js-intro{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.person .aside .list{
+    margin-bottom: 16px;
+    border-bottom:1px solid #f0f0f0;
+    clear: both;
+    padding-bottom: 16px;
+}
+.person .aside .list li{
+     margin-bottom: 10px;
+ }
+.person .aside .list li a{
+    display: inline-block;
+}
+.person .aside .user-dynamic{
+    padding-bottom: 6px;
+}
+
+.person .aside .user-dynamic a{
+    font-size: 14px;
+    line-height: 30px;
+}
+.person .aside .user-dynamic span{
+    vertical-align: middle;
+}
+.person .aside .user-dynamic li i{
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.person .aside .list li a i:before{
+    width: 20px!important;
+    height: 20px!important;
+    display: inline-block;
+}
+.person .aside .list .avatar-collection{
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+.person .aside .list .avatar-collection img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    vertical-align: middle;
+}
+.person .aside .name{
+    position: relative;
+    vertical-align: middle;
+    top: 1px;
+    font-size: 14px;
+    max-width: 236px;
+}
+.person .aside .list i {
+    color:#969696;
+    font-size:20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
