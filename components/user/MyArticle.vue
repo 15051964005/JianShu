@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>1</h1>
         <ul class="note-list">
             <li class="have-img">
                 <nuxt-link to="/p/123" class="wrap-img">

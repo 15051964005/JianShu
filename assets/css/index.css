@@ -7,11 +7,9 @@
 .index .aside {
     padding-top: 30px;
 }
-
 .index .main .recommend-collection {
     margin-bottom: 20px;
 }
-
 .index .main .recommend-collection a.collection {
     display: inline-block;
     margin: 0 18px 18px 0;
@@ -780,7 +778,7 @@ i.qq {
     margin-bottom: -1px;
     position: relative;
 }
-/***************伪类实现鼠标移入时下滑下向两边展开，两种方法************************/
+/***************伪类实现鼠标移入时下滑线向两边展开，两种方法************************/
 .person .main .trigger-menu li:after{
     content: "";
     position: absolute;
